@@ -8,16 +8,21 @@
 
 <section>
 
-  <form class="search-form" (ngSubmit)="getMovieName()">
-    <mat-form-field>
-      <mat-label>Enter Movie Name</mat-label>
-      <input matInput placeholder="Type Movie Name here">
-    </mat-form-field>
+ 
+<div id="output">
+  <h6>Enter Movie Name here</h6>
+</div>
+<div id="container"> 
+   <form class="search-form" (ngSubmit)="getMovieName()">
+    <input [(ngModel)]="movieName" name="movieName" type="text" id="input" value=""> 
   </form>
+</div>
 
   <router-outlet>
 
   </router-outlet>
 
 </section>
-<!--  -->
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
