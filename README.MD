@@ -1,4 +1,4 @@
-# Binge Movie Recommendation System
+# Binge! - A Movie Recommendation System
 
 ## Team Members:
 * Ayush Bathrey
