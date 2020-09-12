@@ -1,0 +1,19 @@
+.mat-toolbar {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(284deg, #0160a2 119%, #444ba5);
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 36px;
+    padding: 30px 40px;
+
+}
+
+.search-form {
+    margin: 0 auto;
+    width: 280px;
+}
