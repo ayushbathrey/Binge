@@ -1,0 +1,23 @@
+<header>
+  <p>
+    <mat-toolbar color="primary">
+      <h1 class="heading">{{title}}</h1>
+    </mat-toolbar>
+  </p>  
+</header>
+
+<section>
+
+  <form class="search-form" (ngSubmit)="getMovieName()">
+    <mat-form-field>
+      <mat-label>Enter Movie Name</mat-label>
+      <input matInput placeholder="Type Movie Name here">
+    </mat-form-field>
+  </form>
+
+  <router-outlet>
+
+  </router-outlet>
+
+</section>
+<!--  -->
