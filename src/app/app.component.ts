@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,8 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Binge';
+  movieName: string;
 
-  public getMovieName() {
-    console.log('function called');
+  constructor(private spinner: NgxSpinnerService) {
+
+  }
+
+  public getMovieName(): void {
+    this.spinner.show();
+    console.log('function called', this.movieName);
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 5000);
   }
 }
