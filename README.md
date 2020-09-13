@@ -23,6 +23,7 @@ We'll take use of the following parameters :-
 1. **Movies**
 2. **Overviews**
 3. **Taglines** <br>
+
 In simple words. We'll analyze the text used in descriptons of movies to find similarity between movies and on the basis of it, predict output.
 ***
 
