@@ -16,6 +16,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MovieService } from './movie.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { MovieService } from './movie.service';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    HttpClientModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
