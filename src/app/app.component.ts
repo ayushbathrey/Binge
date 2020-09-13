@@ -23,7 +23,7 @@ export class AppComponent {
     this.movieService.getMovieRecommendation(this.movieName).subscribe(
       resp => {
         this.spinner.hide();
-        this.movieService.saveResponse(JSON.stringify(resp));
+        this.movieService.saveResponse(resp);
         this.router.navigate(['/search']);
     }, err => {
       console.log('err', err);

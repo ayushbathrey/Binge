@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class MovieService {
 
   private baseUrl = environment.apiUrl;
-  public apiResponse = [];
+  public apiResponse: any;
 
   constructor(private http: HttpClient,
               private router: Router ) { }

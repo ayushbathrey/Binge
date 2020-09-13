@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
+import { MovieService } from './../movie.service';
 
 
 @Component({
@@ -15,15 +16,13 @@ export class HomeComponent implements OnInit {
   removable = true;
   addOnBlur = true;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruits = [
-    {name: 'Lemon'},
-    {name: 'Lime'},
-    {name: 'Apple'},
-  ];
+  
+  movieData: any;
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.getMovieData();
   }
 
  
@@ -34,7 +33,7 @@ export class HomeComponent implements OnInit {
 
     // Add our fruit
     if ((value || '').trim()) {
-      this.fruits.push({name: value.trim()});
+      this.movieData.push({name: value.trim()});
     }
 
     // Reset the input value
@@ -44,11 +43,15 @@ export class HomeComponent implements OnInit {
   }
 
   remove(fruit): void {
-    const index = this.fruits.indexOf(fruit);
+    const index = this.movieData.indexOf(fruit);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.movieData.splice(index, 1);
     }
+  }
+
+  getMovieData() {
+    this.movieData = this.movieService.getResponse();
   }
 
 }
