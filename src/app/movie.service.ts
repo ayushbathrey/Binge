@@ -24,7 +24,8 @@ export class MovieService {
   }
 
   getResponse(): object {
-     return this.apiResponse;
+    console.log('getResponse was called');
+    return this.apiResponse;
   }
 
 }

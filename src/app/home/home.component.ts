@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { MovieService } from './../movie.service';
@@ -22,6 +22,9 @@ export class HomeComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.getMovieData();
+  }
+  ngOnChanges(): void {
     this.getMovieData();
   }
 
@@ -52,6 +55,8 @@ export class HomeComponent implements OnInit {
 
   getMovieData() {
     this.movieData = this.movieService.getResponse();
+    this.movieData = Object.values(this.movieData['suggestion']);
+    console.log("HomeComponent.ts,getMovieData()",this.movieData, typeof(this.movieData));
   }
 
 }
