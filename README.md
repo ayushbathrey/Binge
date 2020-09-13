@@ -2,7 +2,7 @@
 This project was generated with Angular CLI version 10.1.1.<br>
 ***
 You just watched an amazing movie and thought "Wow! I wish i could watch more movies like this." and you ask a friend for his/her suggestions? <br>
-Well, Binge is just the THING !
+Well, Binge is just the THING !<br>
 **Binge** is a movie recommendation system that seeks to predict an item based rating/ preference a user would give to an item in past history.<br>
 In one line -> **Specialized content for everyone.**
 <br>
