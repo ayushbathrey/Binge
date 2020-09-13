@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { MovieService } from './movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +12,24 @@ export class AppComponent {
   title = 'Binge';
   movieName: string;
 
-  constructor(private spinner: NgxSpinnerService) {
+  constructor(private spinner: NgxSpinnerService, private movieService: MovieService, private router: Router) {
 
   }
 
   public getMovieName(): void {
+
     this.spinner.show();
-    console.log('function called', this.movieName);
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
+
+    this.movieService.getMovieRecommendation(this.movieName).subscribe(
+      resp => {
+        this.spinner.hide();
+        this.movieService.saveResponse(JSON.stringify(resp));
+        this.router.navigate(['/search']);
+    }, err => {
+      console.log('err', err);
       this.spinner.hide();
-    }, 5000);
+    },
+    );
+
   }
 }
