@@ -45,4 +45,4 @@ In simple words. We'll analyze the text used in descriptons of movies to find si
 # Demo 
 **Click on image below for Youtube Video**
 
-[![Link to my YouTube video!](https://github.com/ayushbathrey/Binge/blob/master/docs/short.gif)](https://www.youtube.com/embed/FH7XiBqh98c)
+[![Link to my YouTube video!](https://github.com/ayushbathrey/Binge/blob/master/docs/short.gif)](https://www.youtube.com/embed/3SbYxrSDv6c)
